@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Servicios Generales Integrales - Soluciones profesionales de mantenimiento y reparaciones para hogares, oficinas y negocios en Colombia">
+    <meta name="keywords"
+        content="plomero en Bogotá, electricista en Bogotá, servicios generales Bogotá, mantenimiento locativo Bogotá, pintura de apartamentos Bogotá, instalación drywall Bogotá, impermeabilización Bogotá, reparaciones locativas Bogotá, maestro de obra Bogotá, destape de cañerías Bogotá, plomería urgente Bogotá, arreglos locativos, remodelaciones Bogotá, técnicos certificados Bogotá">
+    <meta name="geo.region" content="CO-DC" />
+    <meta name="geo.placename" content="Bogotá" />
+    <meta name="geo.position" content="4.60971;-74.08175" />
+    <meta name="ICBM" content="4.60971, -74.08175" />
+    <meta name="description"
+        content="Expertos en servicios generales en Bogotá. Plomería, electricidad, drywall y mantenimiento locativo con garantía por escrito. ¡Técnicos calificados y cotización gratis hoy mismo!">
+    <meta name="language" content="Spanish">
+    <meta name="target" content="all">
+    <meta name="audience" content="all">
+    <meta name="coverage" content="Bogotá, Colombia">
+    <title>[Nombre de la Empresa] - Servicios Generales Integrales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Animaciones suaves */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto hover en tarjetas */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Gradiente personalizado */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Botón con efecto */
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #1f2937;
+            transform: scale(1.05);
+        }
+
+        /* Timeline personalizada */
+        .timeline-step {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 3rem;
+            width: 2px;
+            height: calc(100% - 2rem);
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-step:last-child::before {
+            display: none;
+        }
+
+        .timeline-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 25px rgba(37, 211, 102, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- ============================================
+         HEADER / NAVIGATION
+         ============================================ -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">
+                    [Nombre de la Empresa]
+                </div>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#servicios"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium">Servicios</a>
+                    <a href="#por-que-elegirnos" class="text-gray-700 hover:text-purple-600 transition font-medium">Por
+                        Qué Elegirnos</a>
+                    <a href="#proceso" class="text-gray-700 hover:text-purple-600 transition font-medium">Proceso</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-purple-600 transition font-medium">Contacto</a>
+                </div>
+                <!-- Botón Menú Móvil -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Menú Móvil Desplegable -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#servicios"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium py-2 px-4 rounded-lg hover:bg-purple-50">
+                        <i class="fas fa-tools mr-2"></i>Servicios
+                    </a>
+                    <a href="#por-que-elegirnos"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium py-2 px-4 rounded-lg hover:bg-purple-50">
+                        <i class="fas fa-star mr-2"></i>Por Qué Elegirnos
+                    </a>
+                    <a href="#proceso"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium py-2 px-4 rounded-lg hover:bg-purple-50">
+                        <i class="fas fa-tasks mr-2"></i>Proceso
+                    </a>
+                    <a href="#contacto"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium py-2 px-4 rounded-lg hover:bg-purple-50">
+                        <i class="fas fa-envelope mr-2"></i>Contacto
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="gradient-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Soluciones Integrales para tu Hogar, Oficina y Negocio
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100 leading-relaxed">
+                    Servicios profesionales de mantenimiento y reparaciones con garantía real y personal calificado
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contacto"
+                        class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl inline-flex items-center gap-2">
+                        <i class="fas fa-file-invoice"></i>
+                        Solicitar Cotización
+                    </a>
+                    <button onclick="openPhoneModal()"
+                        class="btn-secondary bg-white text-purple-700 px-8 py-4 rounded-full font-semibold text-lg shadow-xl inline-flex items-center gap-2">
+                        <i class="fas fa-phone"></i>
+                        Llámanos Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICIOS SECTION
+         ============================================ -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Nuestros <span class="gradient-text">Servicios</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Soluciones profesionales con garantía por escrito y personal altamente calificado
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Servicio 1: Pintura -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-paint-roller text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Pintura</h3>
+                    <p class="text-gray-600 mb-4">
+                        Aplicación profesional de pintura en interiores y exteriores con preparación de superficies,
+                        imprimación y acabados de alta calidad.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Acabados impecables y duraderos
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Electricidad -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Electricidad</h3>
+                    <p class="text-gray-600 mb-4">
+                        Instalaciones eléctricas, reparaciones, mantenimiento preventivo y correctivo, cableado
+                        estructurado y solución de fallas eléctricas.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Instalaciones seguras y certificadas
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Vidriería -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-window-maximize text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Vidriería</h3>
+                    <p class="text-gray-600 mb-4">
+                        Instalación y reemplazo de vidrios templados, laminados, espejos, divisiones de baño y ventanas
+                        con acabados profesionales.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Transparencia y estética garantizada
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Aluminio -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-door-open text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Aluminio</h3>
+                    <p class="text-gray-600 mb-4">
+                        Fabricación e instalación de ventanas, puertas, divisiones de oficina, fachadas y estructuras en
+                        aluminio de alta resistencia.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Estructuras modernas y resistentes
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Drywall -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-th-large text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Drywall</h3>
+                    <p class="text-gray-600 mb-4">
+                        Construcción de muros divisorios, cielos rasos, remodelaciones, acabados arquitectónicos y
+                        soluciones de diseño interior.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Espacios optimizados y funcionales
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Plomería -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-wrench text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Plomería</h3>
+                    <p class="text-gray-600 mb-4">
+                        Instalación y reparación de tuberías, grifería, sanitarios, destapes, detección de fugas y
+                        mantenimiento de sistemas hidráulicos.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Sistemas eficientes sin fugas
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 7: Jardinería -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Jardinería</h3>
+                    <p class="text-gray-600 mb-4">
+                        Diseño, mantenimiento y cuidado de jardines, poda de árboles, siembra de plantas ornamentales y
+                        sistemas de riego.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Espacios verdes y saludables
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 8: Impermeabilización -->
+                <div class="service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Impermeabilización</h3>
+                    <p class="text-gray-600 mb-4">
+                        Aplicación de sistemas impermeabilizantes en techos, terrazas, baños y fachadas para protección
+                        contra humedad y filtraciones.
+                    </p>
+                    <div class="bg-purple-50 rounded-lg p-3">
+                        <p class="text-sm font-semibold text-purple-700">
+                            <i class="fas fa-check-circle mr-2"></i>Protección total contra humedad
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         POR QUÉ ELEGIRNOS SECTION
+         ============================================ -->
+    <section id="por-que-elegirnos" class="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    ¿Por Qué <span class="gradient-text">Elegirnos?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Nuestro compromiso es tu tranquilidad y satisfacción total
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Diferenciador 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user-tie text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Personal Calificado</h3>
+                            <p class="text-gray-600">
+                                Técnicos certificados con amplia experiencia y formación continua en cada especialidad
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diferenciador 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-gem text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Materiales Premium</h3>
+                            <p class="text-gray-600">
+                                Utilizamos únicamente materiales de primera calidad de marcas reconocidas y certificadas
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diferenciador 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-file-contract text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Garantía por Escrito</h3>
+                            <p class="text-gray-600">
+                                Garantía por escrito en mano de obra y materiales para tu total tranquilidad
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diferenciador 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Puntualidad Garantizada</h3>
+                            <p class="text-gray-600">
+                                Cumplimiento estricto de horarios y plazos de entrega acordados desde el inicio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diferenciador 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-dollar-sign text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Precios Transparentes</h3>
+                            <p class="text-gray-600">
+                                Cotizaciones claras y detalladas sin costos ocultos ni sorpresas al final
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diferenciador 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-headset text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Atención Personalizada</h3>
+                            <p class="text-gray-600">
+                                Asesoría técnica profesional y seguimiento continuo durante todo el proyecto
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diferenciador 7 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition md:col-span-2 lg:col-span-3">
+                    <div class="flex items-start gap-4 max-w-2xl mx-auto">
+                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-life-ring text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Respaldo Post-Servicio</h3>
+                            <p class="text-gray-600">
+                                Soporte continuo después de finalizado el trabajo para garantizar tu satisfacción total
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROCESO DE TRABAJO SECTION
+         ============================================ -->
+    <section id="proceso" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Nuestro <span class="gradient-text">Proceso de Trabajo</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Un método probado que garantiza resultados excepcionales en cada proyecto
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Paso 1 -->
+                <div class="timeline-step mb-12">
+                    <div class="timeline-number">1</div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-600">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Contacto Inicial y Diagnóstico</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Recibimos tu solicitud por WhatsApp, teléfono o formulario web. Realizamos una evaluación
+                            inicial de tus necesidades y agendamos una visita técnica sin costo para un diagnóstico
+                            detallado del trabajo requerido.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="timeline-step mb-12">
+                    <div class="timeline-number">2</div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-600">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Cotización Detallada y Transparente</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Elaboramos una cotización completa que incluye: descripción del trabajo, materiales a
+                            utilizar, tiempo estimado de ejecución, costos desglosados y condiciones de garantía. Todo
+                            por escrito y sin letra pequeña.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="timeline-step mb-12">
+                    <div class="timeline-number">3</div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-600">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Planificación y Coordinación</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Una vez aprobada la cotización, coordinamos contigo la fecha y hora de inicio. Asignamos el
+                            equipo técnico especializado y gestionamos la adquisición de materiales premium para
+                            garantizar disponibilidad y calidad.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="timeline-step mb-12">
+                    <div class="timeline-number">4</div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-600">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Ejecución Profesional del Servicio</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Nuestro equipo llega puntualmente con todas las herramientas y materiales necesarios.
+                            Ejecutamos el trabajo con los más altos estándares de calidad, manteniendo el área limpia y
+                            ordenada. Te mantenemos informado del progreso en cada etapa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paso 5 -->
+                <div class="timeline-step">
+                    <div class="timeline-number">5</div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-600">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Entrega, Verificación y Garantía</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Realizamos una inspección final contigo para verificar que todo esté perfecto. Entregamos el
+                            área completamente limpia y te proporcionamos la garantía por escrito en mano de obra.
+                            Quedamos disponibles para cualquier soporte post-servicio que necesites.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GARANTÍA Y CALIDAD SECTION
+         ============================================ -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <i class="fas fa-certificate text-6xl mb-6 opacity-90"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Garantía y Compromiso con la Calidad
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed text-purple-100">
+                    Tu satisfacción es nuestra prioridad. Cada servicio que realizamos está respaldado por nuestra
+                    garantía por escrito en mano de obra, asegurando que el trabajo cumpla con los más altos estándares
+                    de calidad y durabilidad.
+                </p>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <p class="text-lg leading-relaxed">
+                        No solo entregamos un servicio, entregamos <strong>tranquilidad</strong>. Nuestro equipo de
+                        profesionales certificados trabaja con materiales premium y técnicas probadas para garantizar
+                        resultados que perduran en el tiempo. Además, ofrecemos soporte post-servicio para cualquier
+                        consulta o ajuste que necesites.
+                    </p>
+                </div>
+                <div
+                    class="mt-8 inline-flex items-center gap-3 bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Garantía por escrito en mano de obra</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACTO SECTION
+         ============================================ -->
+    <section id="contacto" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    ¿Listo para Transformar tu Espacio?
+                </h2>
+                <p class="text-xl text-gray-600 mb-12 leading-relaxed">
+                    Contáctanos hoy mismo y recibe una cotización detallada sin compromiso. Nuestro equipo está listo
+                    para brindarte la mejor solución para tu hogar, oficina o negocio.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+                    <!-- WhatsApp -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-whatsapp text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">WhatsApp</h3>
+                        <p class="text-gray-600 mb-4">Respuesta inmediata</p>
+                        <a href="https://wa.me/57" class="text-green-600 font-semibold hover:text-green-700">
+                            Enviar mensaje
+                        </a>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
+                        <p class="text-gray-600 mb-4">Llámanos directamente</p>
+                        <a href="tel:+57" class="text-blue-600 font-semibold hover:text-blue-700">
+                            +57 XXX XXX XXXX
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                        <p class="text-gray-600 mb-4">Escríbenos tu consulta</p>
+                        <a href="mailto:info@empresa.com" class="text-purple-600 font-semibold hover:text-purple-700">
+                            info@empresa.com
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Solicita tu Cotización Gratuita</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-left text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                    placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-left text-gray-700 font-semibold mb-2">Teléfono</label>
+                                <input type="tel"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                    placeholder="+57 XXX XXX XXXX">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Servicio de Interés</label>
+                            <select
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition">
+                                <option>Selecciona un servicio</option>
+                                <option>Pintura</option>
+                                <option>Electricidad</option>
+                                <option>Vidriería</option>
+                                <option>Aluminio</option>
+                                <option>Drywall</option>
+                                <option>Plomería</option>
+                                <option>Jardinería</option>
+                                <option>Impermeabilización</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-left text-gray-700 font-semibold mb-2">Describe tu Proyecto</label>
+                            <textarea rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition"
+                                placeholder="Cuéntanos qué necesitas..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="btn-primary w-full text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+                <!-- Columna 1: Empresa -->
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4 gradient-text">[Nombre de la Empresa]</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Soluciones integrales de mantenimiento y reparaciones con garantía real y profesionalismo.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Servicios -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#servicios" class="hover:text-purple-400 transition">Pintura</a></li>
+                        <li><a href="#servicios" class="hover:text-purple-400 transition">Electricidad</a></li>
+                        <li><a href="#servicios" class="hover:text-purple-400 transition">Vidriería</a></li>
+                        <li><a href="#servicios" class="hover:text-purple-400 transition">Plomería</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Enlaces -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#servicios" class="hover:text-purple-400 transition">Nuestros Servicios</a></li>
+                        <li><a href="#por-que-elegirnos" class="hover:text-purple-400 transition">Por Qué Elegirnos</a>
+                        </li>
+                        <li><a href="#proceso" class="hover:text-purple-400 transition">Proceso de Trabajo</a></li>
+                        <li><a href="#contacto" class="hover:text-purple-400 transition">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone text-purple-400"></i>
+                            <span>+57 XXX XXX XXXX</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-purple-400"></i>
+                            <span>info@empresa.com</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-purple-400"></i>
+                            <span>Colombia</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500">
+                    &copy; 2026 [Nombre de la Empresa]. Todos los derechos reservados. | Servicios Generales Integrales
+                    en Colombia
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         MODAL DE TELÉFONO
+         ============================================ -->
+    <div id="phoneModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        onclick="closePhoneModal(event)">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 transform transition-all"
+            onclick="event.stopPropagation()">
+            <!-- Botón cerrar -->
+            <button onclick="closePhoneModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <!-- Icono -->
+            <div class="text-center mb-6">
+                <div
+                    class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                    <i class="fas fa-phone text-white text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Llámanos Ahora!</h3>
+                <p class="text-gray-600">Estamos listos para atenderte</p>
+            </div>
+
+            <!-- Número de teléfono -->
+            <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6 mb-6">
+                <p class="text-sm text-gray-600 text-center mb-2">Nuestro número de contacto:</p>
+                <a href="tel:+573001234567"
+                    class="block text-center text-3xl font-bold gradient-text hover:scale-105 transition-transform">
+                    +57 300 123 4567
+                </a>
+                <p class="text-xs text-gray-500 text-center mt-2">Haz clic para llamar directamente</p>
+            </div>
+
+            <!-- Horario de atención -->
+            <div class="text-center text-sm text-gray-600 mb-6">
+                <p class="font-semibold mb-1">Horario de Atención:</p>
+                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                <p>Sábados: 8:00 AM - 2:00 PM</p>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex gap-3">
+                <a href="tel:+573001234567"
+                    class="flex-1 btn-primary text-white px-6 py-3 rounded-xl font-semibold text-center inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i>
+                    Llamar Ahora
+                </a>
+                <a href="https://wa.me/573001234567"
+                    class="flex-1 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold text-center inline-flex items-center justify-center gap-2 transition">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         WHATSAPP FLOATING BUTTON
+         ============================================ -->
+    <a href="https://wa.me/57" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================ -->
+    <script>
+        // Smooth scroll para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animación de aparición al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .timeline-step').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Manejo del menú móvil
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                // Toggle del menú
+                mobileMenu.classList.toggle('hidden');
+
+                // Cambiar icono entre hamburguesa y X
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                }
+            });
+
+            // Cerrar menú al hacer clic en un enlace
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Funciones para el modal de teléfono
+        function openPhoneModal() {
+            const modal = document.getElementById('phoneModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Prevenir scroll del body cuando el modal está abierto
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePhoneModal(event) {
+            // Si se pasa un evento, verificar que sea el click en el overlay
+            if (event && event.target.id !== 'phoneModal') {
+                return;
+            }
+            const modal = document.getElementById('phoneModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            // Restaurar scroll del body
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closePhoneModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
